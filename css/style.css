@@ -74,13 +74,16 @@ nav a:hover{
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
-  position: -40px;
-  visibility: hidden;
+  position: absolute;
+  top: -40px;
+  overflow: hidden;
 }
 
-.skip a:focus{
-  position: 0px;
-  visibility: visible;
+.skip a:focus{  
+  top:inherit; 
+} 
+
+.a:focus{
   border-width: 2px;
   border-style: solid;
 }
@@ -152,11 +155,10 @@ nav a:hover{
   }
     /* You need to write some of your own selectors here */
     .text-block{
-      margin-block: auto;
+      align-self: center;
       background-color: rgba(255, 255, 255, .8);
       border: 10px solid black;
       padding: 30px;
-      text-align: center;
     }
     /* Your code here */
 
@@ -169,7 +171,7 @@ nav a:hover{
 
   .container{
    grid-template-columns: 50px auto 500px auto 50px;
-   grid-template-rows: 400px 400px 400px 400px 400px;
+   grid-template-rows: repeat(5, 400px);
   }
 
   
